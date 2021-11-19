@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+body {
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #99ff66 74%);
+  min-height: 100vh;
+  font-family: 'Fira Sans', sans-serif;
+    display: flex;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .section {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 10px 16px;
+    width: 75%;
+    margin-bottom: 1pc;
+    border-radius: 25px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 3pc;
+  }
+
+  .section h2{
+    font-size: 20px;;
+  }
+
+  .section span{
+    text-align: right;
+    text-decoration: dimgray;
+    padding: 2px;
+  }
+  .section:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .section .comments{
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+  }
+
+  .section .user{
+    text-align: right;
+  }
+
+  .btnComment{
+    width: fit-content;
+  }
