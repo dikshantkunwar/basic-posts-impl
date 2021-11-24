@@ -1,5 +1,6 @@
 const sUrl = "https://jsonplaceholder.typicode.com";
 
+//TODO change this so it renders into html directly
 $(function () {
 
   $.get(sUrl + "/posts", (data, status) => {

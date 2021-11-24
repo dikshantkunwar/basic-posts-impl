@@ -1,0 +1,22 @@
+{
+  "name": "basic-posts-impl",
+  "version": "1.0.0",
+  "description": "Display of posts, usernames and comments under the posts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dikshantkunwar/basic-posts-impl.git"
+  },
+  "author": "dikshant kunwar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dikshantkunwar/basic-posts-impl/issues"
+  },
+  "homepage": "https://github.com/dikshantkunwar/basic-posts-impl#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
