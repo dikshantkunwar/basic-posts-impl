@@ -19,7 +19,8 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     padding: 10px 16px;
-    width: 75%;
+    /* width: 75%; */
+    margin: 15px;
     margin-bottom: 1pc;
     border-radius: 25px;
     background-color: beige;

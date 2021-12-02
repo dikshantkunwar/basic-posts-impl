@@ -13,22 +13,35 @@ $(function () {
     });
 
     //Dynamically render the page by looping through JSON data
-    data.forEach((element) => {
-      $("#results").append($('<div id="' + element.id + '" class="section"/>'));
-      $("#" + element.id).append("<h2>" + element.title + "</h2>");
-      $("#" + element.id).append("<p>" + element.body + "</p>");
-      $("#" + element.id).append(
-        '<button type="button" class="btn btn-primary btnComment" id="' +
-          element.id +
-          '">Comments</button>'
-      );
-
-      //Fetch post user names
-      $.get(sUrl + "/users/" + element.userId, (data, status) => {
-        $("#" + element.id).append("<div class='user'><span><i>" + data.name + "</i></span></div>");
-      });
+    data.forEach((element) => {      
+      $("#results").append( createPostElement(element) );
+      const userdata = getUserName(element);
+      $("#" + element.id).append(createUserNameElement(userdata)); 
     });
   });
+
+  function createPostElement(element) {
+    const $post = 
+    `<div class="section" id=${element.id}>
+        <h2>${element.title}</h2>
+        <p>${element.body}</p>
+        <button type="button" class="btn btn-primary btnComment" id="${element.id}"> Comments </button>
+      </div>`
+      return $post;
+  };
+
+  function createUserNameElement(data) {
+    const $user = 
+    `<div class="user"> <span><i> ${data.name} </i></span></div>`;
+    return $user;
+  }
+
+  function getUserName(element) {
+    $.get(sUrl + "/users/" + element.userId, (data) => {
+      //createUserNameElement(data);
+      return data;
+    })
+  }
 
   //@param id: post's parent id
   function showComment(id) {
